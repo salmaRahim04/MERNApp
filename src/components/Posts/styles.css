@@ -1,0 +1,24 @@
+.AllPosts{
+    display: grid;
+    grid-template-columns: auto ;
+    
+}
+@media only screen and (min-width: 768px) {
+    .AllPosts {    
+        grid-template-columns: auto auto  ;
+        margin: 0;
+
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    .AllPosts {    
+        grid-template-columns: auto auto  auto ;
+        margin: 0;
+
+    }
+  }
+  .CircularProgress{
+   display: flex;  
+   justify-content: center;
+   align-items: center;
+}

@@ -1,0 +1,85 @@
+.LoginCard{
+    padding: 20px;
+    margin: 40px;
+    width: 100% ;
+    border-top:3px solid rgb(29, 175, 143) ;
+    animation: bounce 0.8s ease 0s running;
+	box-shadow: 0px 0px 24px #5C5696;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+}
+.buttonerror {
+    animation: wiggle 2s linear  ;
+  }
+.LoginHeader{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.LoginHeader > *{
+    margin-right: 10px;
+
+}
+.LoginHeader {
+    margin-top: 30px;
+    
+}
+.GoogleBtn{
+    width: 95%;
+    padding: 15px;
+    font-size: 15px;
+    background-color: rgb(127, 144, 255);
+}
+.LoginInput{
+   margin-top: 20px !important;
+   font-size: 18px;
+}
+
+.authBtn{
+    background-color: rgb(29, 175, 143) ;
+    width: 95%;
+    color:#fff ;
+    padding: 14px;
+    font-size: 18px;
+
+}
+.errorMessage{
+    background-color: #FFBABA;
+    color: #ba3939;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+@keyframes bounce { 
+    0% { -webkit-transform: translate3d(0,-25px,0); transform: translate3d(0,-25px,0); opacity:0; }
+    25% { -webkit-transform: translate3d(0,10px,0); transform: translate3d(0,10px,0); }
+    50% { -webkit-transform: translate3d(0,-6px,0); transform: translate3d(0,-6px,0); }
+    75% { -webkit-transform: translate3d(0,2px,0); transform: translate3d(0,2px,0); }
+    100% { -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; }
+  }
+ 
+  
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-10deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
