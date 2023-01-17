@@ -1,0 +1,111 @@
+.FormCard {
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+  }
+.formHeader {
+  font-weight:700;  
+    letter-spacing:1px; text-transform:uppercase;
+     width:160px; 
+    text-align:center;
+     margin:auto; white-space:nowrap;
+      padding-bottom:13px;
+      position: relative;
+  }
+  .formHeader:before {
+      background-color: #c50000;
+      content: '';
+      display: block;
+      height: 3px;
+      width: 75px;
+      margin-bottom: 5px;
+  }
+  
+  .formHeader:after {
+    background-color: rgb(29, 175, 143);
+    content: '';
+    display: block;
+  position:absolute; 
+  right:0; bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+  
+
+.FormInput,.fileInput{
+    margin-top: 2rem !important;
+
+}
+button{
+    margin: 10px;
+    margin-top: 30px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border: unset;
+    padding: 10px;
+
+     border-radius: 4px;
+}
+
+.Submit{
+   width: 65%;
+    background-color: rgb(29, 175, 143);
+    transition: all .5s;
+
+}
+.Submit:hover,
+.Submit:focus {
+  box-shadow: 0 0.5em 0.5em -0.2em rgb(29, 175, 143);
+  transform: translateY(-0.25em);
+}
+.clear:hover,
+.clear:focus {
+  box-shadow: 0 0.5em 0.5em -0.2em rgb(212, 94, 94);
+  transform: translateY(-0.25em);
+}
+.clear{
+    width: 30%;
+    background-color: rgb(173, 26, 26);
+    transition: all .5s;
+  
+}
+@media only screen and (max-width: 1024px) {
+    .Submit,.clear {
+      width: 100%;
+    }
+    .FormCard {
+      margin-left: 0;
+      margin-right: 0;
+
+    }
+  }
+  .devBtn{
+    display: flex;
+    justify-content: end;
+  }
+  .FormBtn{
+    background-color: rgb(29, 175, 143);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    display: flex;
+   justify-content: center;
+   align-items: center; 
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  .HID{
+    transition: all 1s ease-out;
+    display: none;
+
+  }
+
+.SignInMessage{
+  margin: 20px ;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgb(247, 228, 204) !important;
+}
