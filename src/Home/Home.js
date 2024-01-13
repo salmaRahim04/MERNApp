@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import {getPosts,getPostsBySearch} from '../actions/posts'
 import {useLocation, useNavigate } from 'react-router-dom';
 import ChipInput from 'material-ui-chip-input';
-import Form from '../components/Form/Form';
 import Posts from '../components/Posts/Posts';
 
 function useQuery(){
@@ -19,8 +18,7 @@ export const Home = () => {
     const dispatch = useDispatch();
     const query = useQuery();
     const navigate = useNavigate();
-   // const page = query.get('page')|| 1;
-    //const searchQuery = query.get("searchQuery");
+
   
     const searchPost = () => {
       if (search.trim() || tags) {
@@ -46,8 +44,9 @@ export const Home = () => {
   return (
     <>
    
-     <Form  currentId={currentId}/>
-    <div className='devBtn'><Button onClick={() => setSearchBtn(!searchBtn)} className="searchbtn"> <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt=""/></Button> </div>    
+    <div className='devBtn'><Button onClick={() => setSearchBtn(!searchBtn)} className="searchbtn">
+       <img width={50}  src="https://cdn-icons-png.flaticon.com/512/8755/8755997.png" alt=""/></Button> 
+       </div>    
    <Container className={searchBtn==true? 'SHOW':'HIDE'}>
     <AppBar className="searchForm" position="static" color="inherit">
       <TextField
@@ -67,6 +66,7 @@ export const Home = () => {
         <Button style={{backgroundColor: 'rgb(29, 175, 143)',color:'#fff'}} onClick={searchPost} variant="contained" ><SearchIcon/> Search</Button>
      </AppBar> 
     </Container>
+    
     <Posts setCurrentId={setCurrentId}/>
    
     </>

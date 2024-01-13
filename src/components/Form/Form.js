@@ -1,5 +1,5 @@
 import React, { useState , useEffect} from 'react';
-import {  Container, Paper, TextField } from '@material-ui/core';
+import {  Paper, TextField } from '@material-ui/core';
 import FileBase from 'react-file-base64';
 import { useDispatch, useSelector} from 'react-redux';
 import RemoveIcon from '@material-ui/icons/Remove';
@@ -27,6 +27,7 @@ const Form = ({currentId,setCurrentId}) =>{
    },[post])
    console.log(currentId);
    const clear = () =>{
+   //setCurrentId(0)
       setPostData({creator:'',title:'',message:'',tags:'',selectedFile:''})
 }
     const handleSubmit = (e) =>{
@@ -44,11 +45,9 @@ const Form = ({currentId,setCurrentId}) =>{
         }
     if(!user?.result?.name){
         return(
-            <Container>
-                <Paper className='SignInMessage'>
+            <Paper className='SignInMessage'>
                 Please Sign in to create your own memories 
             </Paper>
-            </Container>
         )
     }
             console.log(postData);
@@ -69,8 +68,6 @@ const Form = ({currentId,setCurrentId}) =>{
                      onDone={({base64})=> setPostData({...postData,selectedFile:base64})}
 
                     />
-                   
-      
                 </div>
                  <button   className='Submit btn btn-white btn-animated'>Submit</button>
                  <button className='clear' onClick={clear}>Clear</button>

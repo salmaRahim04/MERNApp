@@ -1,4 +1,4 @@
-import {FETCH_ERROR,AUTH,LOGOUT } from '../Constants/actionTypes';
+import {FETCH_ERROR,AUTH,LOGOUT,FETCH_USER } from '../Constants/actionTypes';
 
 export default  (state = {authData:null},action) =>{
     switch (action.type) {
@@ -7,8 +7,10 @@ export default  (state = {authData:null},action) =>{
             localStorage.setItem('profileUser', JSON.stringify({...action?.data}));
             return {...state,authData:action?.data};
        case LOGOUT:
-           localStorage.clear();
+            localStorage.removeItem('profileUser');
            return {...state,authData:null};
+        case FETCH_USER:
+            return  action.payload;
         case FETCH_ERROR:
             return action.payload;
         default:

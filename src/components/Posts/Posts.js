@@ -9,7 +9,8 @@ import './styles.css'
 const Posts = ({currentId,setCurrentId}) =>{
 
   const posts  = useSelector(state=> state.posts)
-  console.log(posts);
+
+  console.log(currentId);
     return (  
  !posts.length ? <div className='CircularProgress'><CircularProgress /></div> : (
   <Container>

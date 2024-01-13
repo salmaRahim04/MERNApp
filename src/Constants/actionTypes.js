@@ -8,3 +8,4 @@ export const AUTH ='AUTH';
 export const LOGOUT ='LOGOUT';
 export const FETCH_POST = 'FETCH_POST';
 export const FETCH_ERROR = 'FETCH_ERROR';
+export const FETCH_USER = 'FETCH_USER';

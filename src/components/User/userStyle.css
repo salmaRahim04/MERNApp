@@ -1,0 +1,400 @@
+.useravatar{
+  padding: 40px;
+  margin-right: 30px;
+}
+.userInfo{
+    display: flex;
+    margin: 40px 0;
+    justify-content: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+
+}
+.editContainer{
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
+}
+.editContainer div{
+  margin: 0 10px;
+}
+.flexCard{
+    display: flex;
+}
+.editContainer .btn{
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: darkslategray;
+    color: #fff;
+    height: 40px;
+}
+/* userStyle.css */
+
+/* Styling for user info */
+.userInfo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .useravatar {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-right: 20px;
+    background-color: #ccc;
+  }
+  
+  .editContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styling for posts */
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .post {
+    width: calc(33.33% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .post:hover {
+    transform: scale(1.05);
+  }
+  
+  .post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Modal styling */
+  .modal {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; 
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Styling for Card components within the modal */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+  }
+  
+  .card-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-right: 10px;
+    background-color: #ccc;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-subheader {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .card-media {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .card-tag {
+    background-color: #007bff;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #ddd;
+  }
+  
+  .card-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card-button-secondary {
+    background-color: #dc3545;
+  }
+  
+  .card-button-edit {
+    background-color: #28a745;
+  }
+  
+  /* Add your other CSS rules here */
+  /* userStyle.css */
+
+/* ... Previous CSS rules ... */
+
+/* userStyle.css */
+
+/* ... Previous CSS rules ... */
+
+/* Center the modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  width: 600px;
+}
+
+/* Increase image size */
+.post-image {
+  width: 100%;
+  height: 300px; /* Adjust image height as needed */
+  object-fit: cover;
+}
+
+/* ... Rest of the CSS rules ... */
+
+
+  
+
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+.PostInfo{
+    min-width: 300px;;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+
+}
+.posts{
+    position: absolute;
+
+    display: flex ;
+}
+.user h2{
+    margin-left: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.user span{
+    margin-left: 10px;
+    padding-top: 20px !important;
+
+}
+.contentContainer {
+    margin: 10px;
+}
+.contentContainer h3{
+    font-size: 30px;
+}
+.contentContainer p{
+    color: #737070;
+    font-size: 22px;
+    text-align: center;
+}
+.contentContainer h4{
+    font-size: 12px;
+
+
+}
+.flexCard img{
+    margin-left: -20px;
+}
+/* styles.css */
+
+.custom-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imgProfile{
+  width: 100px ;
+  height: 100px ;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  position: relative; /* Required for absolute positioning of the "Add" icon */
+}
+
+.profile-image-wrapper {
+  position: relative; /* For positioning the image or avatar */
+}
+
+.add-icon-wrapper {
+  position: absolute;
+  background-color: #00428c;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 20px;
+  transform: translate(-150%, -130%); /* Position the icon at the top-right corner */
+}
+
+/* modalStyles.css */
+.story-image {
+  width: 100%; /* Make the image occupy the full width of the story container */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+.custom-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-contentStory {
+  background-color: lightgray; /* Change this to your desired background color */
+  border-radius: 8px;
+  padding: 20px;
+  padding-right: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.story-container {
+  position: relative; /* Enable positioning */
+
+}
+
+.user-info {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+ 
+}
+
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+
+
+.story-image {
+  width: 100%; /* Adjust the width as needed */
+  height: auto;
+}
+.messageIcon{
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 60px !important;
+}

@@ -7,12 +7,12 @@ import decode from 'jwt-decode'
 import './style.css';
 const Navbar = () => {
     const [user,setUser] = useState(JSON.parse(localStorage.getItem("profileUser")));
-    console.log(user);
     const dispatch = useDispatch();
     const location = useLocation
     const logout = () =>{
          dispatch({type:'LOGOUT'});
          window.location.reload()
+              // Example: Clear user ID
 
          setUser(null)
     }
@@ -30,21 +30,29 @@ const Navbar = () => {
         <div className="header">
      <Link style={{textDecoration: 'none'}} to="/">
      <div className="Title">
-       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUjzTkmD232Re_7rR_BSIN3c_6R-WtN-fxdQ&usqp=CAU" alt="memories" width="50" />
-        <h1 className="headerName">Our Memories</h1>
+       <img src="https://api.logo.com/api/v2/images?logo=logo_ddb8c000-1522-49b1-93e6-f187d6b2e06a&format=webp&margins=0&quality=60&width=500&background=transparent&u=1692926752" alt="memories" width="300" />
        </div>
        </Link>
        <div >
             {
                 user? (
+                  
+                    //  <Link to={'/user/'+user.result._id}>
+                
                     <div className="profile">
-                     
-                         <Avatar className="avatar" alt={user.result.name} src={user.result.imageIrl}>{user.result.name.charAt(0)}</Avatar>
-                        <h3>{user.result.name} </h3>
-                    
+                     <Link to={'/user/'+user.result._id} className="no-underline">
+                        <div className="profile">
+                        {
+                      user?.result?.selectedFile ? <img src={user?.result?.selectedFile} className='imgProfileNavbar'  alt='hi'/>:
+                       <Avatar className=" useravatar imgProfileNavbar"   alt={user?.result.name} src={user?.result.imageIrl}>{user?.result.name.charAt(0)}</Avatar>
+                         }                        
+                         <h3>{user.result.name} </h3>
+                        </div>
+                        </Link>
                         <button className="logOutBtn" onClick={logout}>Log out</button>
                    
                     </div>
+                  
 
                 ):(
                     <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>

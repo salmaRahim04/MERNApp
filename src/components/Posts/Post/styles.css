@@ -131,6 +131,7 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
   }    
+
 .actions{
   margin: 20px;
   display: flex;
@@ -146,4 +147,8 @@ text-align: left;
  padding: 10px;
  font-family: "MockFlowFont";  
  cursor: pointer;
+}
+.no-underline {
+  text-decoration: none; /* Remove the underline */
+  /* You can add more styling here, such as color, hover effects, etc. */
 }

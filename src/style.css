@@ -20,6 +20,9 @@
     margin: 20px;
     
   }
+  .devBtn img{
+    margin: 30px;
+  }
   
   .SHOW{
     display: block !important;
